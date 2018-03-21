@@ -61,27 +61,27 @@ local pricesText = display.newText("Prices", 1600, 200, native.systemFont, 100 )
 pricesText:setFillColor( 0, 0, 0 )
 pricesText.id = "Prices Heading"
 
-local topping1Text = display.newText("1 topping cost 1$", 1600, 350, native.systemFont, 75 )
+local topping1Text = display.newText("1 topping cost $1", 1600, 350, native.systemFont, 75 )
 topping1Text:setFillColor ( 0, 0, 0 )
 topping1Text.id = "Topping 1 price"
 
-local topping2Text = display.newText("2 toppings cost 1.75$", 1600,450, native.systemFont, 75)
+local topping2Text = display.newText("2 toppings cost $1.75", 1600,450, native.systemFont, 75)
 topping2Text:setFillColor ( 0, 0, 0 )
 topping2Text.id = "Topping 2 price"
 
-local topping3Text = display.newText("3 toppings cost 2.50$", 1600,550, native.systemFont, 75)
+local topping3Text = display.newText("3 toppings cost $2.50", 1600,550, native.systemFont, 75)
 topping3Text:setFillColor ( 0, 0, 0 )
 topping3Text.id = "Topping 3 price"
 
-local topping4Text = display.newText("4 toppings cost 3.35$", 1600,650, native.systemFont, 75)
+local topping4Text = display.newText("4 toppings cost $3.35", 1600,650, native.systemFont, 75)
 topping4Text:setFillColor ( 0, 0, 0 )
 topping4Text.id = "Topping 4 price"
 
-local largeText = display.newText("Large cost 6$", 1600, 850, native.systemFont, 75)
+local largeText = display.newText("Large cost $6", 1600, 850, native.systemFont, 75)
 largeText:setFillColor ( 0, 0, 0 )
 largeText,id = "Large size price"
 
-local extraLargeText = display.newText("ExtraLarge cost 10$", 1600 , 950 , native.systemFont, 75 )
+local extraLargeText = display.newText("ExtraLarge cost $10", 1600 , 950 , native.systemFont, 75 )
 extraLargeText:setFillColor ( 0 , 0, 0 )
 extraLargeText.id = "Extra Large size price"
 
@@ -115,9 +115,9 @@ if userTopping == topping1  then
 		subTotal = topping1 + large
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		large = "1"
 	end
 
@@ -127,9 +127,9 @@ if userTopping == topping2 then
 		subTotal = topping2 + large
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		large = "1"
 		topping2 = "2"
 	end
@@ -140,9 +140,9 @@ if userTopping == topping3 then
 		subTotal = topping3 + large
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. "$"
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		large = "1"
 		topping3 = "3"
 	end
@@ -153,9 +153,9 @@ if userTopping == topping4 then
 		subTotal = topping4 + large
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		large = "1"
 		topping4 = "4"
 	end
@@ -172,9 +172,9 @@ if userTopping == topping1 then
 		subTotal = topping1 + extraLarge
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		extraLarge = "0"
 	end
 
@@ -184,9 +184,9 @@ if userTopping == topping2 then
 		subTotal = topping2 + extraLarge
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		extraLarge = "0"
 		topping2 = "2"
 	end
@@ -197,9 +197,9 @@ if userTopping == topping3 then
 		subTotal = topping3 + extraLarge
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		extraLarge = "0"
 		topping3 = "3"
 	end
@@ -210,9 +210,9 @@ if userTopping == topping4 then
 		subTotal = topping4 + extraLarge
 		taxes = subTotal * HTS
 		totalPrice = subTotal + taxes
-		subTotalText.text = "Subtotal : " .. string.format("%.2f",subTotal) .. "$"
-		taxesText.text = "Taxes : " .. string.format("%.2f",taxes) .."$"
-		totalPriceText.text = "Total cost : " .. string.format("%.2f",totalPrice) .."$"
+		subTotalText.text = "Subtotal : $" .. string.format("%.2f",subTotal) .. ""
+		taxesText.text = "Taxes : $" .. string.format("%.2f",taxes) ..""
+		totalPriceText.text = "Total cost : $" .. string.format("%.2f",totalPrice) ..""
 		extraLarge = "0"
 		topping4 = "4"
 	end
